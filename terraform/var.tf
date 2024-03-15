@@ -1,5 +1,5 @@
 variable project_id {
-  #  default = "blog-posts-417209"
+    default = "blog-posts-417209"
 }
 
 variable branch {
