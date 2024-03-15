@@ -1,4 +1,6 @@
-variable project_id {}
+variable project_id {
+  #  default = "blog-posts-417209"
+}
 
 variable branch {
   description = "branch"
