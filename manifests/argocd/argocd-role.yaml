@@ -7,6 +7,12 @@ rules:
   - apiGroups:
       - rbac.authorization.k8s.io
     resources:
+      - rolebindings
+    verbs:
+      - create
+  - apiGroups:
+      - rbac.authorization.k8s.io
+    resources:
       - roles
     verbs:
       - create
