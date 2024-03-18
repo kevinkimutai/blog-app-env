@@ -19,6 +19,6 @@ terraform {
     }
   }
   backend "gcs" {
-    prefix  = "mdo-terraform"
+    prefix  = "blog-posts-terraform"
   }
 }
