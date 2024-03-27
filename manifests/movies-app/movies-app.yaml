@@ -38,6 +38,13 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
+          resources:
+            requests:
+              memory: "512Mi" # Request 512Mi memory
+              cpu: "500m" # Request 500 millicpu (0.5 CPU)
+            limits:
+              memory: "1Gi" # Limit memory to 1Gi
+              cpu: "1" # Limit CPU to 1 CPU
   volumeClaimTemplates:
     - metadata:
         name: postgres-storage
@@ -94,6 +101,14 @@ spec:
                 secretKeyRef:
                   name: postgres-creds
                   key: POSTGRES_PASSWORD
+          resources:
+            requests:
+              memory: "256Mi" # Request 256Mi memory
+              cpu: "250m" # Request 250 millicpu (0.25 CPU)
+            limits:
+              memory: "512Mi" # Limit memory to 512Mi
+              cpu: "0.5" # Limit CPU to 0.5 CPU
+
 ---
 apiVersion: v1
 kind: Service
